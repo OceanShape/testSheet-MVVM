@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="MVVM_example" customModuleProvider="target">
             <connections>
+                <outlet property="classNumberSlider" destination="zoc-ik-XSq" id="Glx-GB-b1b"/>
+                <outlet property="gradeNumberSlider" destination="Itk-xF-OzX" id="AaR-0a-fnm"/>
                 <outlet property="valueLabel" destination="Ocb-Kw-cT3" id="ACo-Wz-qVI"/>
             </connections>
         </placeholder>
@@ -23,25 +25,36 @@
                         <constraint firstAttribute="width" constant="150" id="TPK-ZQ-aQC"/>
                         <constraint firstAttribute="height" constant="50" id="qRS-aY-IcO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-xF-OzX">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-xF-OzX" userLabel="Grade Number Slider">
                     <rect key="frame" x="95" y="114" width="204" height="31"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="aff-pS-4wD"/>
                     </constraints>
                     <connections>
-                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="Ra8-Er-shL"/>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="EcT-NV-fQL"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="1" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-ik-XSq" userLabel="Class Number Slider">
+                    <rect key="frame" x="95" y="149" width="204" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="WCP-SS-wo0"/>
+                    </constraints>
+                    <connections>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="5yu-bT-XAO"/>
                     </connections>
                 </slider>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="Itk-xF-OzX" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="30" id="6xE-ft-Mgr"/>
+                <constraint firstItem="zoc-ik-XSq" firstAttribute="top" secondItem="Itk-xF-OzX" secondAttribute="bottom" constant="5" id="JoV-0m-vIM"/>
                 <constraint firstItem="Itk-xF-OzX" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="idY-kF-tjV"/>
                 <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="-30" id="pVM-Ju-hWM"/>
+                <constraint firstItem="zoc-ik-XSq" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="rhr-Kb-7YO"/>
                 <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="ucG-9C-fKw"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
