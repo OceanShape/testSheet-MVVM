@@ -12,19 +12,33 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVVM_example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XiP-E7-gpj" customClass="CustomView" customModule="MVVM_example" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="mwS-BP-h5I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <viewLayoutGuide key="safeArea" id="O25-Hi-ctA"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yo-LH-fmA" customClass="CustomView" customModule="MVVM_example" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Yo-LH-fmA" secondAttribute="height" multiplier="3:2" id="FAk-lv-MIF"/>
+                                    <constraint firstAttribute="width" constant="300" id="jUY-Nb-xnB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sQU-4x-Aih"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Yo-LH-fmA" firstAttribute="centerX" secondItem="mwS-BP-h5I" secondAttribute="centerX" id="GPk-HF-W3V"/>
+                            <constraint firstItem="4Yo-LH-fmA" firstAttribute="centerY" secondItem="mwS-BP-h5I" secondAttribute="centerY" id="z3G-1I-zFK"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="customView" destination="XiP-E7-gpj" id="UIj-Fp-uT0"/>
+                        <outlet property="customView" destination="4Yo-LH-fmA" id="Nal-ve-qjU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="65.625"/>
+            <point key="canvasLocation" x="130.40000000000001" y="65.217391304347828"/>
         </scene>
     </scenes>
     <resources>

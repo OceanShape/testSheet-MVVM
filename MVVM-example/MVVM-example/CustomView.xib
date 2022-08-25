@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="MVVM_example" customModuleProvider="target">
             <connections>
-                <outlet property="valueLabel" destination="aRV-3N-gif" id="HC3-ur-9kx"/>
+                <outlet property="valueLabel" destination="Ocb-Kw-cT3" id="ACo-Wz-qVI"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,22 +17,33 @@
             <rect key="frame" x="0.0" y="0.0" width="394" height="198"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aRV-3N-gif">
-                    <rect key="frame" x="98" y="41" width="198" height="61"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-Kw-cT3">
+                    <rect key="frame" x="122" y="44" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="TPK-ZQ-aQC"/>
+                        <constraint firstAttribute="height" constant="50" id="qRS-aY-IcO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" id="uYm-pc-uc4">
-                    <rect key="frame" x="82" y="129" width="230" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-xF-OzX">
+                    <rect key="frame" x="95" y="114" width="204" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="aff-pS-4wD"/>
+                    </constraints>
                     <connections>
-                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="4nu-pa-Hzy"/>
+                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="Ra8-Er-shL"/>
                     </connections>
                 </slider>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Itk-xF-OzX" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="30" id="6xE-ft-Mgr"/>
+                <constraint firstItem="Itk-xF-OzX" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="idY-kF-tjV"/>
+                <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="-30" id="pVM-Ju-hWM"/>
+                <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="ucG-9C-fKw"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-6700.8000000000002" y="-7598.5007496251883"/>
         </view>

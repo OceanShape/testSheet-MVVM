@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class CustomView: UIView {
-    
+
     @IBOutlet weak var valueLabel: UILabel!
 
     override init(frame: CGRect) {
@@ -21,6 +21,7 @@ class CustomView: UIView {
                                        options: nil)?.first as! UIView
         view.frame = bounds
         addSubview(view)
+        self.valueLabel.text = "0"
     }
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
