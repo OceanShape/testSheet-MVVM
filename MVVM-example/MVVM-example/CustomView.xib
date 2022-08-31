@@ -9,18 +9,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="MVVM_example" customModuleProvider="target">
             <connections>
-                <outlet property="classNumberSlider" destination="zoc-ik-XSq" id="Glx-GB-b1b"/>
-                <outlet property="gradeNumberSlider" destination="Itk-xF-OzX" id="AaR-0a-fnm"/>
-                <outlet property="valueLabel" destination="Ocb-Kw-cT3" id="ACo-Wz-qVI"/>
+                <outlet property="animalStatusPicker" destination="Lfq-jZ-Qeq" id="7ux-dM-Gyv"/>
+                <outlet property="statusLabel" destination="Ocb-Kw-cT3" id="ftU-bP-aas"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="0zo-Ml-gnS">
-            <rect key="frame" x="0.0" y="0.0" width="394" height="198"/>
+            <rect key="frame" x="0.0" y="0.0" width="394" height="358"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-Kw-cT3">
-                    <rect key="frame" x="122" y="44" width="150" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-Kw-cT3" userLabel="Status">
+                    <rect key="frame" x="122" y="129" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="TPK-ZQ-aQC"/>
                         <constraint firstAttribute="height" constant="50" id="qRS-aY-IcO"/>
@@ -29,36 +28,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Itk-xF-OzX" userLabel="Grade Number Slider">
-                    <rect key="frame" x="95" y="114" width="204" height="31"/>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-jZ-Qeq" userLabel="animalStatus">
+                    <rect key="frame" x="0.0" y="179" width="394" height="150"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="aff-pS-4wD"/>
+                        <constraint firstAttribute="height" constant="150" id="gzn-5o-k5t"/>
                     </constraints>
-                    <connections>
-                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="EcT-NV-fQL"/>
-                    </connections>
-                </slider>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="1" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="zoc-ik-XSq" userLabel="Class Number Slider">
-                    <rect key="frame" x="95" y="149" width="204" height="31"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="WCP-SS-wo0"/>
-                    </constraints>
-                    <connections>
-                        <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="5yu-bT-XAO"/>
-                    </connections>
-                </slider>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Itk-xF-OzX" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="30" id="6xE-ft-Mgr"/>
-                <constraint firstItem="zoc-ik-XSq" firstAttribute="top" secondItem="Itk-xF-OzX" secondAttribute="bottom" constant="5" id="JoV-0m-vIM"/>
-                <constraint firstItem="Itk-xF-OzX" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="idY-kF-tjV"/>
-                <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" constant="-30" id="pVM-Ju-hWM"/>
-                <constraint firstItem="zoc-ik-XSq" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="rhr-Kb-7YO"/>
-                <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="ucG-9C-fKw"/>
+                <constraint firstAttribute="trailing" secondItem="Lfq-jZ-Qeq" secondAttribute="trailing" id="82T-Vo-8ir"/>
+                <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="leading" secondItem="0zo-Ml-gnS" secondAttribute="leading" id="Rku-zi-iFh"/>
+                <constraint firstAttribute="centerY" secondItem="Ocb-Kw-cT3" secondAttribute="bottom" id="oXe-72-F0L"/>
+                <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="top" secondItem="0zo-Ml-gnS" secondAttribute="centerY" id="tw4-Xj-uRr"/>
+                <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="v6w-dw-cku"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-6700.8000000000002" y="-7598.5007496251883"/>
+            <point key="canvasLocation" x="-6700.8000000000002" y="-7526.5367316341835"/>
         </view>
     </objects>
     <resources>

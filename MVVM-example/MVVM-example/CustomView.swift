@@ -3,11 +3,9 @@ import UIKit
 
 class CustomView: UIView {
 
-    @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
-    @IBOutlet weak var gradeNumberSlider: UISlider!
-    
-    @IBOutlet weak var classNumberSlider: UISlider!
+    @IBOutlet weak var animalStatusPicker: UIPickerView!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,15 +23,6 @@ class CustomView: UIView {
                                        options: nil)?.first as! UIView
         view.frame = bounds
         addSubview(view)
-        self.valueLabel.text = "2학년 8반"
-    }
-    
-    @IBAction func sliderValueChanged(_ sender: Any) {
-        let gradeNumber = Int(gradeNumberSlider.value)
-        let classNumber = Int(classNumberSlider.value)
-        gradeNumberSlider.value = Float(gradeNumber)
-        classNumberSlider.value = Float(classNumber)
-        
-        self.valueLabel.text = String(format: "%d학년 %d반", gradeNumber, classNumber)
+        self.statusLabel.text = ""
     }
 }

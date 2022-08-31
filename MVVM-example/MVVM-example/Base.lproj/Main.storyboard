@@ -33,7 +33,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="customView" destination="4Yo-LH-fmA" id="Nal-ve-qjU"/>
+                        <outlet property="customView" destination="4Yo-LH-fmA" id="N0h-g9-l25"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
