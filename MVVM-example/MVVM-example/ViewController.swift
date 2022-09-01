@@ -40,7 +40,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let animal = AnimalType.allCases[pickerView.selectedRow(inComponent: 0)]
-        print(type(of: animal))
         self.customView.statusLabel.text = String(format: "\(animal)(%d)", pickerView.selectedRow(inComponent: 1))
     }
 }

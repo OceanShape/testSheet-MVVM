@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F5B7AF6A28C06F8A002EE48F /* AnimalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7AF6928C06F8A002EE48F /* AnimalType.swift */; };
+		F5B7AF6C28C08097002EE48F /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7AF6B28C08097002EE48F /* Animal.swift */; };
 		F5DA7EAD28B3AD2D00E250E2 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DA7EAC28B3AD2D00E250E2 /* CustomView.swift */; };
 		F5DA7EAF28B3AD5A00E250E2 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DA7EAE28B3AD5A00E250E2 /* CustomView.xib */; };
 		F5F1847428B39D0700DEF409 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F1847328B39D0700DEF409 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		F5B7AF6928C06F8A002EE48F /* AnimalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalType.swift; sourceTree = "<group>"; };
+		F5B7AF6B28C08097002EE48F /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		F5DA7EAC28B3AD2D00E250E2 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		F5DA7EAE28B3AD5A00E250E2 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		F5F1847028B39D0700DEF409 /* MVVM-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,7 @@
 				F5DA7EAC28B3AD2D00E250E2 /* CustomView.swift */,
 				F5DA7EAE28B3AD5A00E250E2 /* CustomView.xib */,
 				F5B7AF6928C06F8A002EE48F /* AnimalType.swift */,
+				F5B7AF6B28C08097002EE48F /* Animal.swift */,
 			);
 			path = "MVVM-example";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F5F1847428B39D0700DEF409 /* AppDelegate.swift in Sources */,
 				F5F1847628B39D0700DEF409 /* SceneDelegate.swift in Sources */,
 				F5B7AF6A28C06F8A002EE48F /* AnimalType.swift in Sources */,
+				F5B7AF6C28C08097002EE48F /* Animal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
