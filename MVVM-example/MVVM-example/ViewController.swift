@@ -3,8 +3,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var customView: CustomView!
-    
-    let animalType = ["cat", "dog", "pika", "hedgehog"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +19,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch component {
         case 0:
-            return animalType.count
+            return AnimalType.allCases.count
         case 1:
             return 25
         default:
@@ -32,7 +30,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch component {
         case 0:
-            return self.animalType[row]
+            return AnimalType.allCases[row].rawValue
         case 1:
             return String(row)
         default:
@@ -41,7 +39,8 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let animal = animalType[pickerView.selectedRow(inComponent: 0)]
+        let animal = AnimalType.allCases[pickerView.selectedRow(inComponent: 0)]
+        print(type(of: animal))
         self.customView.statusLabel.text = String(format: "\(animal)(%d)", pickerView.selectedRow(inComponent: 1))
     }
 }
