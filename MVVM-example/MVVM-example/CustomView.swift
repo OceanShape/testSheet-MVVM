@@ -1,23 +1,13 @@
 import Foundation
 import UIKit
 
-protocol CustomViewDelegate: UIPickerViewDelegate, UIPickerViewDataSource {
-    func saveButtonTouched()
-}
-
 class CustomView: UIView {
 
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var animalStatusPicker: UIPickerView!
 
-    var delegate: CustomViewDelegate? = nil {
-        willSet(newDelegate) {
-            self.delegate = newDelegate
-            animalStatusPicker.delegate = newDelegate
-            animalStatusPicker.dataSource = newDelegate
-        }
-    }
+    var buffer = ""
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,7 +20,7 @@ class CustomView: UIView {
     }
 
     @IBAction func saveButtonTouched(_ sender: Any) {
-        delegate!.saveButtonTouched()
+        self.statusLabel.text = buffer
     }
     
     private func loadView() {
@@ -39,5 +29,42 @@ class CustomView: UIView {
                                        options: nil)?.first as! UIView
         view.frame = bounds
         addSubview(view)
+        self.animalStatusPicker.delegate = self
+        self.animalStatusPicker.dataSource = self
     }
 }
+
+extension CustomView: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch component {
+        case 0:
+            return AnimalType.allCases.count
+        case 1:
+            return 25
+        default:
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch component {
+        case 0:
+            return AnimalType.allCases[row].rawValue
+        case 1:
+            return String(row)
+        default:
+            return "NONE"
+        }
+    }
+
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let animal = AnimalType.allCases[pickerView.selectedRow(inComponent: 0)]
+        self.buffer = String(format: "\(animal)(%d)", pickerView.selectedRow(inComponent: 1))
+    }
+}
+
