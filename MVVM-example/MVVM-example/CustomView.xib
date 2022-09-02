@@ -18,8 +18,9 @@
             <rect key="frame" x="0.0" y="0.0" width="394" height="358"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-Kw-cT3" userLabel="Status">
-                    <rect key="frame" x="122" y="129" width="150" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocb-Kw-cT3" userLabel="StatusLabel">
+                    <rect key="frame" x="122" y="54" width="150" height="50"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="TPK-ZQ-aQC"/>
                         <constraint firstAttribute="height" constant="50" id="qRS-aY-IcO"/>
@@ -29,18 +30,32 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfq-jZ-Qeq" userLabel="animalStatus">
-                    <rect key="frame" x="0.0" y="179" width="394" height="150"/>
+                    <rect key="frame" x="0.0" y="104" width="394" height="150"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="150" id="gzn-5o-k5t"/>
                     </constraints>
                 </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIu-YT-cJ1" userLabel="SaveButton">
+                    <rect key="frame" x="122" y="254" width="150" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="0jM-2u-frf"/>
+                        <constraint firstAttribute="height" constant="50" id="4tk-bx-IlZ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                    <connections>
+                        <action selector="saveButtonTouched:" destination="-1" eventType="touchUpInside" id="Qe9-n2-bld"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Lfq-jZ-Qeq" secondAttribute="trailing" id="82T-Vo-8ir"/>
+                <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="centerY" secondItem="0zo-Ml-gnS" secondAttribute="centerY" id="AiT-jX-nIJ"/>
+                <constraint firstItem="AIu-YT-cJ1" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="J7v-dA-Y6w"/>
                 <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="leading" secondItem="0zo-Ml-gnS" secondAttribute="leading" id="Rku-zi-iFh"/>
-                <constraint firstAttribute="centerY" secondItem="Ocb-Kw-cT3" secondAttribute="bottom" id="oXe-72-F0L"/>
-                <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="top" secondItem="0zo-Ml-gnS" secondAttribute="centerY" id="tw4-Xj-uRr"/>
+                <constraint firstItem="Lfq-jZ-Qeq" firstAttribute="top" secondItem="Ocb-Kw-cT3" secondAttribute="bottom" id="WUz-k9-uFv"/>
+                <constraint firstItem="AIu-YT-cJ1" firstAttribute="top" secondItem="Lfq-jZ-Qeq" secondAttribute="bottom" id="rVb-Cf-ohv"/>
                 <constraint firstItem="Ocb-Kw-cT3" firstAttribute="centerX" secondItem="0zo-Ml-gnS" secondAttribute="centerX" id="v6w-dw-cku"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -50,6 +65,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

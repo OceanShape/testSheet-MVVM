@@ -1,17 +1,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet var customView: CustomView!
+
+    var viewModel = ViewModel()
+
+    var buffer = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.customView.animalStatusPicker.delegate = self
-        self.customView.animalStatusPicker.dataSource = self
+        self.customView.delegate = self
     }
 }
+extension ViewController: CustomViewDelegate {
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func saveButtonTouched() {
+        self.customView.statusLabel.text = buffer
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
     }
@@ -40,6 +47,6 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let animal = AnimalType.allCases[pickerView.selectedRow(inComponent: 0)]
-        self.customView.statusLabel.text = String(format: "\(animal)(%d)", pickerView.selectedRow(inComponent: 1))
+        self.buffer = String(format: "\(animal)(%d)", pickerView.selectedRow(inComponent: 1))
     }
 }

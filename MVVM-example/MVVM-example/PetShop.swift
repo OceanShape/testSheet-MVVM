@@ -1,5 +1,5 @@
 import Foundation
 
 struct PetShop {
-    var animal: [Animal]
+    var animal = [Animal]()
 }
